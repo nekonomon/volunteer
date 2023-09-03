@@ -1,0 +1,239 @@
+*{
+    margin:0rem;
+    padding:0rem;
+}
+html{
+    font-size: 0.0667vw;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    font-size: 16rem;
+    position: absolute;
+}
+main{
+    margin:40rem;
+    position: relative;
+    top:7vh;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    background-color:white;
+    position: fixed;
+    width:100%;
+    top:0rem;
+    z-index: 2;
+}
+header .logo {
+    flex-grow: 0; /* フレックスアイテムの伸縮を防止 */
+}
+header .logo a{
+    text-decoration: none;
+    color: black;
+    font-size:30rem;
+    font-weight:bold ;
+    margin-left:30rem;
+}
+header ul {
+    display: flex; /* ナビゲーションの要素を横並びに */
+    list-style-type: none; /* リストマーカーを削除 */
+    margin-right: 40rem; 
+}
+header ul li {
+    margin-left: 20px; /* ナビゲーションの要素間にスペースを追加 */
+}
+header a{
+    display: block;
+    font-size: 20rem;
+    color:black;
+    line-height:5vh;
+    text-align: center;
+    text-decoration: block;
+    text-decoration: none;
+    margin: 10rem;
+    padding: 10rem;
+}
+header ul li:not(:first-child){
+    margin-left: 40rem;
+}
+header ul li:last-child a {
+    background-color: #28c3d4;
+    color: #fff;
+    border-radius: 200rem;
+    font-size: 20rem;
+}
+.c-hamburger-menu__input {
+display: none;
+}
+
+.c-hamburger-menu__bg {
+background-color: #000; /* カスタマイズしてください */
+cursor: pointer;
+display: none;
+height: 100vh;
+left: 0;
+opacity: 0.4; /* カスタマイズしてください */
+position: absolute;
+top: 0;
+width: 100%;
+z-index: -1;
+}
+
+#hamburger:checked ~ .c-hamburger-menu__bg {
+display: block;
+}
+
+.c-hamburger-menu__button {
+display: none;
+}
+
+/* セクション */
+.profile-card {
+    background-color: #fff;
+    padding: 20rem;
+    margin-bottom: 20rem;
+    border-radius: 5rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+    font-size: 24rem;
+    margin-bottom: 10rem;
+}
+
+.profile-card h3 {
+    font-size: 20rem;
+    margin-bottom: 10rem;
+    color: #666;
+}
+
+.profile-card p {
+    margin-bottom: 10rem;
+}
+
+.profile-card .message {
+    border-top: 1rem solid #eee;
+    padding-top: 10rem;
+}
+
+@media screen and (max-width:800px) {
+    .menu {
+        position: fixed;
+        right: -70%;
+        width: 70%;
+        height: 100vh;
+        margin-left: auto;
+        /* メニューを縦に */
+        display: flex;
+        flex-direction: column;
+        color: #efefef;
+        background-color: rgba(167, 148, 58, 0.7);
+        transition: .3s;
+    }
+    .menu-list {
+        width: 100%;
+        height: 100%;
+        /* メニューテキスト位置をリスト内中心に */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .c-hamburger-menu__button {
+        align-items: center;
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px; /* カスタマイズしてください */
+        height: 32px; /* カスタマイズしてください */
+        justify-content: center;
+        width: 32px; /* カスタマイズしてください */
+      }
+    .c-hamburger-menu__button-mark {
+      background-color: #000; /* カスタマイズしてください */
+      display: block;
+      height: 1px; /* カスタマイズしてください */
+      transition: 0.3s; /* カスタマイズしてください */
+      width: 20px; /* カスタマイズしてください */
+    }
+    #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(1) {
+        transform: translate(2px, 1px) rotate(45deg);
+        transform-origin: 0%; 
+    }
+    #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(2) {
+    opacity: 0;
+    }
+    #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(3) {
+    transform: translate(2px, 3px) rotate(-45deg); 
+    transform-origin: 0%; 
+    }
+    .c-hamburger-menu__list {
+        background-color: #eeeeee; /* カスタマイズしてください */
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 2rem; /* カスタマイズしてください */
+        position: absolute;
+        transform: translateX(-100%);
+        transition: 0.3s; /* カスタマイズしてください */
+        top: 100%;
+        width: 100%;
+    }
+    
+    #hamburger:checked ~ .c-hamburger-menu__list {
+        transform: translateX(0%);
+        transition: 0.3s;
+    }
+    header .logo a{
+        font-size:70rem;
+        font-weight:bold ;
+    }
+    header ul {
+        display: flex; /* ナビゲーションの要素を横並びに */
+        list-style-type: none; /* リストマーカーを削除 */
+    }
+    header ul li {
+        margin-left: 40rem; /* ナビゲーションの要素間にスペースを追加 */
+        font-weight: bold;
+    }
+    header ul li a{
+        font-size: 60rem;
+    }
+    header ul li:last-child a {
+        background-color: transparent;
+        color: #28c3d4;
+        border-radius: 0rem;
+        font-size: 80rem;
+    }
+    main{
+        top:10vh;
+    }
+    .profile-card h2 {
+        font-size: 70rem;
+        margin-bottom: 20rem;
+        font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    }
+    .profile-card h3 {
+        font-size: 60rem;
+        margin-bottom: 40rem;
+        color: #666;
+        font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    }
+    .profile-card p {
+        font-size: 45rem;
+        font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    }
+}

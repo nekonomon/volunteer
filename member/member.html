@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./member.css">
+    <link rel="stylesheet" href="../destroy.css">
+    <title>役職と顧問紹介</title>
+</head>
+<body>
+    <header id ="header" class ="c-header c-hamburger-menu">
+        <div class ="logo"><a href="../index.html#" class="c-header__logo">猫ノ門サークル</a></div>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class ="c-header__list-item"><a href="../index.html#about" class="c-header__list-link">猫ノ門サークルとは</a></li>
+            <li class ="c-header__list-item"><a href="../index.html#result" class="c-header__list-link">活動実績</a></li>
+            <li class ="c-header__list-item"><a href="#" class="c-header__list-link">役職、顧問紹介</a></li>
+            <li class ="c-header__list-item"><a href="https://www.instagram.com/neko_no_mon_2828/?igshid=MmIzYWVlNDQ5Yg%3D%3D" class="c-header__list-link">SNS</a></li>
+            <li class ="header_apply c-header__list-item"><a href="mailto:g21211045@st.tokyo-fukushi.ac.jp" class="c-header__list-link">メンバーになる</a></li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button"><!-- 追記 ハンバーガーメニューのボタン -->
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+          </label>            
+    </header>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+    <main>
+        <div class="profile-card">
+            <h2>代表: 吉田 翔和（よしだ とわ）</h2>
+            <h3>教育学部 教育学科 3年</h3>
+            <p class="message">さまざまな人と出会い交流を持てるため、交友関係がさらに広がります！大学生の期間をより良いものにしていくため、みなさんと一緒にサークル活動をがんばっていきたいです！</p>
+        </div>
+
+        <div class="profile-card">
+            <h2>副代表: 小間 早彩（こま さあや）</h2>
+            <h3>社会福祉学部 社会福祉学科 ３年</h3>
+            <p class="message">サークル活動で様々な体験をして一人ひとりがたくさんの思い出をつくれたらと思います。そのためにもサークルメンバー全員で協力して意味・価値のある活動をしていきたいです。</p>
+        </div>
+
+        <div class="profile-card">
+            <h2>顧問: 北爪 克洋<br>社会福祉准教授</h2>
+            <h3>教育学部 教育学科 3年</h3>
+            <p class="message">社会福祉学修士・社会福祉士・精神保健福祉士。大学では「ソーシャルワーク理論」「ソーシャルワーク演習」などを担当。 ソーシャルワーク技術の専門性と教育方法について研究しています。</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,453 @@
+*{
+    margin:0rem;
+    padding:0rem;
+}
+html{
+    font-size: 0.0667vw;
+}
+body{
+    font-size: 16rem;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    background-color:white;
+    position: fixed;
+    width:100%;
+    top:0rem;
+    z-index: 2;
+}
+header .logo {
+    flex-grow: 0; /* フレックスアイテムの伸縮を防止 */
+}
+header .logo a{
+    text-decoration: none;
+    color: black;
+    font-size:30rem;
+    font-weight:bold ;
+    margin-left:30rem;
+}
+header ul {
+    display: flex; /* ナビゲーションの要素を横並びに */
+    list-style-type: none; /* リストマーカーを削除 */
+    margin-right: 40rem; 
+}
+header ul li {
+    margin-left: 20px; /* ナビゲーションの要素間にスペースを追加 */
+}
+header a{
+    display: block;
+    font-size: 20rem;
+    color:black;
+    line-height:5vh;
+    text-align: center;
+    text-decoration: block;
+    text-decoration: none;
+    margin: 10rem;
+    padding: 10rem;
+}
+header ul li:not(:first-child){
+    margin-left: 40rem;
+}
+header ul li:last-child a {
+    background-color: #28c3d4;
+    color: #fff;
+    border-radius: 200rem;
+    font-size: 20rem;
+}
+.c-hamburger-menu__input {
+display: none;
+}
+
+.c-hamburger-menu__bg {
+background-color: #000; /* カスタマイズしてください */
+cursor: pointer;
+display: none;
+height: 100vh;
+left: 0;
+opacity: 0.4; /* カスタマイズしてください */
+position: absolute;
+top: 0;
+width: 100%;
+z-index: -1;
+}
+
+#hamburger:checked ~ .c-hamburger-menu__bg {
+display: block;
+}
+
+.c-hamburger-menu__button {
+display: none;
+}
+/* セクション */
+section {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 50rem 00rem;
+}
+#Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* 画面の高さに合わせる */
+}
+#Home img{
+    box-sizing: border-box;
+    object-fit: contain;
+    position: relative;
+    align-items: center;
+    max-height: auto;
+    max-width: 100vw;
+    height: auto;
+    width: 100%;
+}
+#Home .Hometxt{
+    margin: auto;
+    left: 12vw;
+    position: absolute;
+}
+#Home .Hometxt h1{
+    font-size: 40rem;
+    color:white;
+    background-color: rgb(0,0,0,0.4);
+}
+#Home .Hometxt .school h1{
+    font-size: 40rem;
+    color:white;
+    background-color: rgba(206, 109, 25, 0.7);
+}
+#tieup {
+    text-align: center;
+}
+#tieup h2{
+    font-size: 30rem;
+    font-weight: bold;
+    display: block;
+    margin: 30rem auto;
+}
+.tieup_img{
+    width:80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; 
+}
+.tieup_img img{
+    width:33.3%;
+    display:block;
+    margin: 0; 
+    padding: 0; 
+    height: auto; /* 追加: 高さを自動に設定 */
+    max-width: none; /* 追加: max-widthの制限を解除 */
+}
+#about h2{
+    text-align: center;
+    font-size: 30rem;
+    font-weight: bold;
+    margin: 30rem auto;
+}
+#about .about_content{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+#about img{
+    margin: 0 150rem 0 200rem;
+    width:30%;
+}
+#about p{
+    text-align: center;
+    line-height: 2;
+    margin: 0 200rem 0 0;
+    width:30%;
+    font-size: 20rem;
+}
+#about p span{
+    font-size: 20rem;
+    color: red;
+}
+#result {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+}
+#result h2{
+    text-align: center;
+    font-size: 30rem;
+    font-weight: bold;
+    color: rgb(11, 183, 126);
+}
+.result-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15rem;
+    overflow: hidden;
+}
+.item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10rem 20rem;
+    cursor: default; /* マウスカーソルをデフォルトに設定 */
+    pointer-events: none; /* クリックイベントを無効にする */
+    min-height: 80rem; 
+}
+
+.date, .title {
+    margin: 0;
+    font-size: 20rem;
+}
+.date {
+    font-weight: bold;
+    color: #888;
+    border-right: 1px solid #ddd;
+    padding-right: 20rem;
+    flex-basis: 20%; /* 日付の領域を確保 */
+}
+.title {
+    flex-grow: 1;
+    padding-left: 20rem;
+}
+#result img{
+    width:80%;
+}
+#apply{
+    text-align: center;
+}
+#apply h2{
+    font-size: 30rem;
+    font-weight: bold;
+    display: block;
+    margin: 30rem auto;
+}
+.apply_img{
+    width:95vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; 
+}
+.apply_img img{
+    width:25%;
+    display:block;
+    margin: 0; 
+    padding: 0; 
+    height: auto; /* 追加: 高さを自動に設定 */
+    max-width: none; /* 追加: max-widthの制限を解除 */
+}
+#sns h3{
+    text-align: center;
+    font-size: 20rem;
+}
+#sns button{
+    margin: 30rem auto;
+    display: block;
+    font-size: 30rem;
+    padding: 10rem 50rem;
+    border: none;
+    outline: none;
+    background: #28c3d4;
+    color: white;
+}
+#require h2{
+    font-size: 30rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20rem;
+}
+#require button{
+    display: block;
+    margin: auto;
+    border: none;
+}
+@media screen and (max-width:750px) {
+    .menu {
+        position: fixed;
+        right: -70%;
+        width: 70%;
+        height: 100vh;
+        margin-left: auto;
+        /* メニューを縦に */
+        display: flex;
+        flex-direction: column;
+        color: #efefef;
+        background-color: rgba(167, 148, 58, 0.7);
+        transition: .3s;
+    }
+    .menu-list {
+        width: 100%;
+        height: 100%;
+        /* メニューテキスト位置をリスト内中心に */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .c-hamburger-menu__button {
+        align-items: center;
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px; /* カスタマイズしてください */
+        height: 32px; /* カスタマイズしてください */
+        justify-content: center;
+        width: 32px; /* カスタマイズしてください */
+      }
+    .c-hamburger-menu__button-mark {
+        background-color: #000; /* カスタマイズしてください */
+        display: block;
+        height: 1px; /* カスタマイズしてください */
+        transition: 0.3s; /* カスタマイズしてください */
+        width: 20px; /* カスタマイズしてください */
+    }
+    #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(1) {
+        transform: translate(2px, 1px) rotate(45deg);
+        transform-origin: 0%; 
+    }
+    #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(2) {
+        opacity: 0;
+    }
+    #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(3) {
+        transform: translate(2px, 3px) rotate(-45deg); 
+        transform-origin: 0%; 
+    }
+    .c-hamburger-menu__list {
+        background-color: #eeeeee; /* カスタマイズしてください */
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 2rem; /* カスタマイズしてください */
+        position: absolute;
+        transform: translateX(-100%);
+        transition: 0.3s; /* カスタマイズしてください */
+        top: 100%;
+        width: 100%;
+    }
+    
+    #hamburger:checked ~ .c-hamburger-menu__list {
+        transform: translateX(0%);
+        transition: 0.3s;
+    }
+    header .logo a{
+        font-size:70rem;
+        font-weight:bold ;
+    }
+    header ul {
+        display: flex; /* ナビゲーションの要素を横並びに */
+        list-style-type: none; /* リストマーカーを削除 */
+    }
+    header ul li {
+        margin-left: 40rem; /* ナビゲーションの要素間にスペースを追加 */
+        font-weight: bold;
+    }
+    header ul li a{
+        font-size: 60rem;
+    }
+    header ul li:last-child a {
+        background-color: transparent;
+        color: #28c3d4;
+        border-radius: 0rem;
+        font-size: 80rem;
+    }
+    #Home img{
+        object-fit: cover;
+        max-height: 80vh;
+        max-width:100vw ;
+        height: 80vh;
+        width: 100vw;
+    }
+    #Home .Hometxt{
+        left:auto;
+        margin: auto;
+    } 
+    #Home .Hometxt h1{
+        font-size: 120rem;
+        color:white;
+        padding: 10rem;
+        background-color: rgb(0,0,0,0.4);
+    } 
+    #Home .Hometxt h1 span{
+        font-size: 150rem;
+        text-align: center;
+        display: block;
+    }
+    #Home .Hometxt .school h1{
+        margin-bottom:200rem;
+        font-size: 150rem;
+        text-align: center;
+        display: block;
+    }
+    #tieup h2{
+        font-size: 60rem;
+    }
+    #about h2{
+        font-size: 60rem;
+    }
+    #about p{
+        text-align: center;
+        line-height: 2;
+        margin: 0 90rem 0 0;
+        width:50%;
+        font-size: 40rem;
+    }
+    #result h2{
+        font-size: 60rem;
+    }
+    #apply h2{
+        font-size: 60rem;
+        display: block;
+        margin: 30rem auto;
+    }
+    #sns h3{
+        text-align: center;
+        font-size: 60rem;
+    }
+    #sns button{
+        margin: 60rem auto;
+        display: block;
+        font-size: 70rem;
+        padding: 25rem 70rem;
+        border: none;
+        outline: none;
+        background: #28c3d4;
+        color: white;
+    }
+    #require h2{
+        font-size: 60rem;
+        margin-bottom: 40rem;
+    }
+    .item a {
+        padding: 10rem 50rem;
+        min-height: 50px; 
+    }
+    .date, .title {
+        margin: 0;
+        font-size: 40rem;
+    }
+    #require button img{
+        width:35vw;
+        height: auto;
+    }
+}
